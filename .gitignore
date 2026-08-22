@@ -1,0 +1,46 @@
+# Dependencies and package-manager caches
+node_modules/
+.pnpm-store/
+
+# Production and test outputs
+dist/
+build/
+out/
+coverage/
+.vite/
+*.tsbuildinfo
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Deployment state
+.vercel/
+
+# OpenAI / Codex local tooling
+.openai/
+.codex/
+.agents/
+
+# Source-generation assets not used by the production build
+source-assets/
+
+# Generated configuration artifacts
+vite.config.js
+vite.config.d.ts
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
