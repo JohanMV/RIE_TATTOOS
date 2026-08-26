@@ -70,6 +70,7 @@
 .process-step strong { color: #d51f2b; font-size: .68rem; letter-spacing: .12em; }
 .process-step h3 { margin: 52px 0 14px; font-size: 1.1rem; }
 .process-step p { margin: 0; color: #8d8984; font-size: .84rem; line-height: 1.6; }
+.process-copy-mobile { display: none; }
 .care-section { display: grid; grid-template-columns: .85fr 1.15fr; gap: 8vw; align-items: center; border-top: 1px solid #242221; }
 .care-image { aspect-ratio: 4 / 5; overflow: hidden; }
 .care-image img { height: 100%; object-fit: cover; }
