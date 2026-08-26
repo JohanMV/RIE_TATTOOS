@@ -1,4 +1,4 @@
-export type TattooStyle = "Todos" | "Blackwork" | "Fine line" | "Realismo" | "Geométrico";
+export type TattooStyle = "Todos" | "Blackwork" | "Fine line" | "Realismo" | "Geométrico" | "Anime";
 
 export interface PortfolioPiece {
   id: number;

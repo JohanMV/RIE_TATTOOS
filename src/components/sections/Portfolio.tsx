@@ -32,7 +32,7 @@ export function Portfolio() {
         </AnimatePresence>
       </motion.div>
       <div className="portfolio-action">
-        <Button href="/portafolio" target="_blank" rel="noreferrer" variant="secondary" arrow>Ver portafolio completo</Button>
+        <Button href="/portafolio" variant="secondary" arrow>Ver portafolio completo</Button>
       </div>
     </section>
   );

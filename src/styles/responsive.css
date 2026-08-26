@@ -21,6 +21,7 @@
   .process-step:nth-child(2) { border-right: 0; }
   .process-step:nth-child(n+3) { border-top: 1px solid #3a3734; }
   .quote-section { grid-template-columns: 1fr; }
+  .tiktok-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 767px) {
@@ -70,6 +71,10 @@
   .care-section { gap: 60px; }
   .care-grid { grid-template-columns: 1fr; gap: 20px; }
   .care-grid h3 { margin-top: 16px; }
+  .tiktok-section { padding-top: 90px; }
+  .tiktok-grid { display: grid; grid-auto-columns: minmax(230px, 74vw); grid-auto-flow: column; grid-template-columns: none; gap: 12px; margin-top: 44px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .tiktok-grid::-webkit-scrollbar { display: none; }
+  .tiktok-grid > div { scroll-snap-align: start; }
   .quote-section { width: calc(100% - 32px); margin-bottom: 90px; }
   .quote-heading, .quote-form-wrap { padding: 52px 20px; }
   .quote-form { grid-template-columns: 1fr; }

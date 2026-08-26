@@ -1,5 +1,5 @@
 import { Footer, Navbar } from "@/components/layout";
-import { Artists, Care, Hero, Portfolio, Process, Quote, Studio, Styles } from "@/components/sections";
+import { Artists, Care, Hero, Portfolio, Process, Quote, Studio, Styles, TikTok } from "@/components/sections";
 import { PortfolioPage } from "@/features/portfolio/components/PortfolioPage";
 
 export default function App() {
@@ -20,6 +20,7 @@ export default function App() {
         <Studio />
         <Process />
         <Care />
+        <TikTok />
         <Quote />
       </main>
       <Footer />

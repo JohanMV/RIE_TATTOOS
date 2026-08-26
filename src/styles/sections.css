@@ -81,6 +81,22 @@
 .care-grid p { margin: 0; color: #898580; font-size: .78rem; line-height: 1.5; }
 .care-link { margin-top: 42px; display: inline-flex; align-items: center; gap: 14px; border-bottom: 1px solid #5d5955; padding-bottom: 7px; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
 .care-link:hover { color: #e32a35; border-color: #e32a35; }
+.tiktok-section { padding-top: 140px; border-top: 1px solid #242221; }
+.tiktok-heading { max-width: 720px; }
+.tiktok-heading .eyebrow { margin-bottom: 24px; }
+.tiktok-heading > p:last-child { max-width: 500px; margin: 30px 0 0; color: #aaa6a1; line-height: 1.7; }
+.tiktok-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin-top: 62px; }
+.tiktok-video { position: relative; aspect-ratio: 9 / 16; overflow: hidden; border: 1px solid #34312e; background: #131313; }
+.tiktok-frame { position: relative; z-index: 1; display: block; width: 100%; height: 100%; border: 0; opacity: 0; transition: opacity .45s ease; }
+.tiktok-frame.ready { opacity: 1; }
+.tiktok-loading { position: absolute; inset: 0; display: grid; place-items: center; background: #131313; }
+.tiktok-loading span { width: 1px; height: 48px; background: #d51f2b; animation: tiktok-loading 1.2s ease-in-out infinite; }
+.tiktok-fallback { height: 100%; display: grid; place-content: center; gap: 14px; padding: 24px; color: #aaa6a1; text-align: center; }
+.tiktok-fallback svg { justify-self: center; color: #d51f2b; }
+.tiktok-fallback p { margin: 0; font-size: .78rem; line-height: 1.5; }
+.tiktok-fallback a { display: inline-flex; align-items: center; justify-content: center; gap: 7px; color: #f2f0eb; font-size: .69rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.tiktok-fallback a:hover { color: #e32a35; }
+@keyframes tiktok-loading { 0%, 100% { transform: scaleY(.35); opacity: .45; } 50% { transform: scaleY(1); opacity: 1; } }
 .quote-section { width: min(100% - 48px, 1400px); margin: 0 auto 140px; display: grid; grid-template-columns: .9fr 1.1fr; background: #131313; border: 1px solid #34312e; }
 .quote-heading { padding: clamp(42px, 6vw, 90px); background: linear-gradient(rgba(9,9,9,.84), rgba(9,9,9,.93)), url("/images/tattoo-hero.jpg") center / cover; }
 .quote-heading .eyebrow { margin-bottom: 30px; }
