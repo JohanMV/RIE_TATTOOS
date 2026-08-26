@@ -3,15 +3,21 @@ import { List, X } from "@phosphor-icons/react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { navItems } from "@/data/content";
 import { useBodyLock } from "@/hooks/useBodyLock";
+import { useScrolled } from "@/hooks/useScrolled";
 import { Button } from "@/components/ui";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const reduce = useReducedMotion();
+  const { scrolled, visible } = useScrolled(60);
   useBodyLock(open);
 
   return (
-    <header className="navbar">
+    <header className={[
+      "navbar",
+      scrolled ? "navbar--scrolled" : "",
+      (!visible && !open) ? "navbar--hidden" : "",
+    ].filter(Boolean).join(" ")}>
       <a className="brand" href="#inicio" aria-label="TATTOO PERÚ, inicio">
         <span className="brand-mark">TP</span><span>TATTOO PERÚ</span>
       </a>

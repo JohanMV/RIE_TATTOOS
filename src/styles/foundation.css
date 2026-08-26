@@ -1,4 +1,6 @@
-.navbar { position: absolute; top: 0; inset-inline: 0; z-index: 20; height: 72px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 48px; padding: 0 42px; border-bottom: 1px solid rgba(242,240,235,.16); color: #f2f0eb; }
+.navbar { position: fixed; top: 0; inset-inline: 0; z-index: 20; height: 72px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 48px; padding: 0 42px; border-bottom: 1px solid rgba(242,240,235,.16); color: #f2f0eb; transition: transform .45s cubic-bezier(.4,0,.2,1), background .45s cubic-bezier(.4,0,.2,1), border-color .45s cubic-bezier(.4,0,.2,1); }
+.navbar--scrolled { background: rgba(10,10,10,.88); border-bottom-color: rgba(242,240,235,.1); }
+.navbar--hidden { transform: translateY(-100%); }
 .brand { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-size: 1rem; font-weight: 900; letter-spacing: -.02em; }
 .brand-mark { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid #d51f2b; color: #e32a35; font-size: .75rem; letter-spacing: -.08em; }
 .desktop-nav { justify-self: center; display: flex; align-items: center; gap: clamp(16px, 2vw, 34px); }
