@@ -2,6 +2,7 @@
 @import "./foundation.css";
 @import "./sections.css";
 @import "./portfolio-page.css";
+@import "./products.css";
 @import "./responsive.css";
 
 @theme {

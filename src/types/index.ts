@@ -15,3 +15,21 @@ export interface Artist {
   styles: string;
   image: string;
 }
+
+export type ProductCategoryId = "aftercare" | "protection" | "equipment" | "supplies";
+
+export interface Product {
+  id: string;
+  name: string;
+  category: ProductCategoryId;
+  image: string;
+  imageAlt: string;
+  imagePosition?: string;
+  sourceUrl: string;
+}
+
+export interface ProductCategory {
+  id: ProductCategoryId;
+  label: string;
+  products: Product[];
+}

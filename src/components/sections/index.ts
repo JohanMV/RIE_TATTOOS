@@ -5,5 +5,6 @@ export * from "./Styles";
 export * from "./Studio";
 export * from "./Process";
 export * from "./Care";
+export * from "./Products";
 export * from "./TikTok";
 export * from "./Quote";
