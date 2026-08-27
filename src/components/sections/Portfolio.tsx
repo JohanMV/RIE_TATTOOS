@@ -12,7 +12,7 @@ export function Portfolio() {
   const featuredWorks = works.slice(0, 4);
   return (
     <section id="portafolio" className="section portfolio-section">
-      <Reveal className="section-heading">
+      <Reveal className="section-heading portfolio-heading">
         <h2>TRABAJOS QUE<br /><span>HABLAN SOLOS</span></h2>
         <p>Una selección de piezas construidas para la anatomía, el movimiento y la historia de cada persona.</p>
       </Reveal>

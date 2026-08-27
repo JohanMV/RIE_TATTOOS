@@ -52,7 +52,7 @@ export function TikTok() {
     <section className="section tiktok-section" aria-labelledby="tiktok-title">
       <Reveal className="tiktok-heading">
         <p className="eyebrow">Trabajo en movimiento</p>
-        <h2 id="tiktok-title">TINTA QUE<br /><span>COBRA VIDA.</span></h2>
+        <h2 id="tiktok-title">TINTA QUE<br /><span>COBRA VIDA</span></h2>
         <p>Una selección de trabajos, procesos y detalles vistos desde el estudio.</p>
       </Reveal>
       <div className="tiktok-grid" aria-label="Videos de TikTok del trabajo del estudio">

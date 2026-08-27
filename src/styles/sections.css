@@ -1,5 +1,7 @@
 .portfolio-section { padding-bottom: 170px; }
 .section-heading { max-width: 850px; }
+.portfolio-heading { max-width: 1060px; }
+@media (min-width: 768px) { .portfolio-heading h2 span { white-space: nowrap; } }
 .section-heading > p { max-width: 540px; margin: 34px 0 0; color: #aaa6a1; line-height: 1.7; }
 .filter-row { margin: 64px 0 28px; display: flex; gap: 6px; flex-wrap: wrap; }
 .filter-row button { padding: 11px 16px; color: #8d8984; border: 1px solid #34312f; background: transparent; border-radius: 1px; cursor: pointer; transition: all .25s ease; }
@@ -83,7 +85,8 @@
 .care-link { margin-top: 42px; display: inline-flex; align-items: center; gap: 14px; border-bottom: 1px solid #5d5955; padding-bottom: 7px; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
 .care-link:hover { color: #e32a35; border-color: #e32a35; }
 .tiktok-section { padding-top: 140px; border-top: 1px solid #242221; }
-.tiktok-heading { max-width: 720px; }
+.tiktok-heading { max-width: 900px; }
+@media (min-width: 768px) { .tiktok-heading h2 span { white-space: nowrap; } }
 .tiktok-heading .eyebrow { margin-bottom: 24px; }
 .tiktok-heading > p:last-child { max-width: 500px; margin: 30px 0 0; color: #aaa6a1; line-height: 1.7; }
 .tiktok-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin-top: 62px; }
