@@ -1,4 +1,4 @@
-import { InstagramLogo, WhatsappLogo } from "@phosphor-icons/react";
+import { InstagramLogo, TiktokLogo, WhatsappLogo } from "@phosphor-icons/react";
 import { navItems, whatsappNumber } from "@/data/content";
 
 export function Footer() {
@@ -14,6 +14,7 @@ export function Footer() {
           <div className="socials">
             <a href="https://instagram.com" aria-label="Instagram"><InstagramLogo size={24} /></a>
             <a href={`https://wa.me/${whatsappNumber}`} aria-label="WhatsApp"><WhatsappLogo size={24} /></a>
+            <a href="https://www.tiktok.com" aria-label="TikTok"><TiktokLogo size={24} /></a>
           </div>
         </div>
       </div>
