@@ -83,6 +83,8 @@
   .quote-heading, .quote-form-wrap { padding: 52px 20px; }
   .quote-form { grid-template-columns: 1fr; }
   .quote-form .full, .submit-button { grid-column: 1; }
+  .date-time-popover { left: 0; right: auto; width: 100%; min-width: 286px; padding: 16px; }
+  .date-time-popover .rdp-root { --rdp-day-height: 36px; --rdp-day-width: 36px; --rdp-day_button-height: 34px; --rdp-day_button-width: 34px; }
   .footer { padding: 70px 16px 24px; }
   .footer-main { grid-template-columns: 1fr; gap: 42px; }
   .footer-bottom { margin-top: 52px; display: grid; gap: 9px; }

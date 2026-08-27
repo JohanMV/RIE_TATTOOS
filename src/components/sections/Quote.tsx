@@ -1,16 +1,16 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { ArrowRight, CheckCircle } from "@phosphor-icons/react";
 import { whatsappNumber } from "@/data/content";
-import { Reveal } from "@/components/ui";
+import { DateTimePicker, Reveal } from "@/components/ui";
 
 export function Quote() {
   const [sent, setSent] = useState(false);
+  const [desiredDate, setDesiredDate] = useState("");
+  const [dateError, setDateError] = useState("");
   const quoteStyles = ["Blackwork", "Fine line", "Realismo", "Geométrico", "Aún no lo sé"];
   const requestedStyle = new URLSearchParams(window.location.search).get("estilo") ?? "";
   const requestedDesign = new URLSearchParams(window.location.search).get("diseno") ?? "";
   const initialStyle = quoteStyles.includes(requestedStyle) ? requestedStyle : "";
-  const today = new Date();
-  const minimumDate = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
 
   useEffect(() => {
     if (window.location.hash === "#agenda") {
@@ -20,11 +20,19 @@ export function Quote() {
 
   const submit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (!desiredDate) {
+      setDateError("Selecciona una fecha y una hora.");
+      return;
+    }
     const data = new FormData(event.currentTarget);
     const referenceUrl = String(data.get("referenceUrl") ?? "").trim();
     const selectedDesign = String(data.get("portfolioDesign") ?? "").trim();
-    const message = `Hola TATTOO PERÚ. Soy ${data.get("name")}. Quiero cotizar un tatuaje ${data.get("style")} en ${data.get("zone")}.${selectedDesign ? ` Me interesa la pieza "${selectedDesign}" del portafolio.` : ""} Mi fecha deseada es ${data.get("desiredDate")}. Mi idea: ${data.get("idea")}.${referenceUrl ? ` Imagen de referencia: ${referenceUrl}.` : ""}`;
+    const desiredDateValue = new Date(desiredDate);
+    const formattedDesiredDate = desiredDateValue.toLocaleString("es-PE", { dateStyle: "long", timeStyle: "short", hour12: true });
+    const message = `Hola TATTOO PERÚ. Soy ${data.get("name")}. Quiero cotizar un tatuaje ${data.get("style")} en ${data.get("zone")}.${selectedDesign ? ` Me interesa la pieza "${selectedDesign}" del portafolio.` : ""} Mi fecha y hora preferidas son ${formattedDesiredDate}. Mi idea: ${data.get("idea")}.${referenceUrl ? ` Imagen de referencia: ${referenceUrl}.` : ""}`;
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+    setDesiredDate("");
+    setDateError("");
     setSent(true);
   };
   return (
@@ -39,7 +47,7 @@ export function Quote() {
             <label>Tu nombre<input name="name" required autoComplete="name" placeholder="Nombre y apellido" /></label>
             <label>Estilo<select name="style" defaultValue={initialStyle}><option value="" disabled>Selecciona un estilo</option><option>Blackwork</option><option>Fine line</option><option>Realismo</option><option>Geométrico</option><option>Aún no lo sé</option></select></label>
             <label>Zona del cuerpo<input name="zone" required placeholder="Ej. antebrazo" /></label>
-            <label>Fecha deseada<input name="desiredDate" type="date" min={minimumDate} required /></label>
+            <div className="date-time-field"><span>Fecha y hora</span><DateTimePicker error={dateError} onChange={(value) => { setDesiredDate(value); setDateError(""); }} /></div>
             <label className="full">Imagen de referencia<input name="referenceUrl" type="url" inputMode="url" placeholder="https://..." /></label>
             <label className="full">Cuéntanos tu idea<textarea name="idea" required rows={3} placeholder={requestedDesign ? `Cuéntanos qué te gustó de ${requestedDesign}` : "Concepto, tamaño aproximado y referencias"} /></label>
             <button className="submit-button" type="submit"><span>Cotizar por WhatsApp</span><ArrowRight size={20} weight="bold" /></button>
