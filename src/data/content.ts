@@ -9,6 +9,7 @@ export const navItems = [
   ["Estilos", "#estilos"],
   ["Estudio", "#estudio"],
   ["Cuidados", "#cuidados"],
+  ["Tienda", "#productos"],
 ] as const;
 
 export const filters: TattooStyle[] = ["Todos", "Blackwork", "Fine line", "Realismo", "Geométrico", "Anime"];
