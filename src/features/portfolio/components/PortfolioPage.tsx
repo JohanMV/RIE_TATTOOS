@@ -42,9 +42,12 @@ export function PortfolioPage() {
 
       <main>
         <section className="portfolio-page-hero">
-          <p className="eyebrow">Archivo completo</p>
-          <h1>TODAS LAS PIEZAS.<br /><span>TODOS LOS ESTILOS.</span></h1>
-          <p>Explora el trabajo del estudio y encuentra el artista indicado para tu próxima idea.</p>
+          <img className="portfolio-page-hero-image" src="/images/porfafolio_banner_.webp" alt="" fetchPriority="high" />
+          <div className="portfolio-page-hero-content">
+            <p className="eyebrow">Archivo completo</p>
+            <h1>TODAS LAS PIEZAS.<br /><span>TODOS LOS ESTILOS.</span></h1>
+            <p>Explora el trabajo del estudio y encuentra el artista indicado para tu próxima idea.</p>
+          </div>
         </section>
 
         <section className="portfolio-archive" aria-labelledby="archive-title">

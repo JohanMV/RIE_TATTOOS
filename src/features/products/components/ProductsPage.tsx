@@ -38,9 +38,12 @@ export function ProductsPage() {
 
       <main>
         <section className="products-page-hero">
-          <p className="eyebrow">Selección del estudio</p>
-          <h1>CUIDADO PARA LA PIEL.<br /><span>EQUIPO PARA EL OFICIO.</span></h1>
-          <p>Artículos elegidos para acompañar el cuidado del tatuaje y el trabajo profesional.</p>
+          <img className="products-page-hero-image" src="/images/tienda_banner_2.webp" alt="" fetchPriority="high" />
+          <div className="products-page-hero-content">
+            <p className="eyebrow">Selección del estudio</p>
+            <h1>CUIDADO PARA LA PIEL.<br /><span>EQUIPO PARA EL OFICIO.</span></h1>
+            <p>Artículos elegidos para acompañar el cuidado del tatuaje y el trabajo profesional.</p>
+          </div>
         </section>
 
         <section className="products-archive" aria-labelledby="products-archive-title">
