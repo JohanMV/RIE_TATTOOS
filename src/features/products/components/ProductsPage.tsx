@@ -32,7 +32,7 @@ export function ProductsPage() {
         <a className="brand" href="/#inicio" aria-label="Volver al inicio de TATTOO PERÚ">
           <span className="brand-mark">TP</span><span>TATTOO PERÚ</span>
         </a>
-        <a className="products-back" href="/#productos"><ArrowLeft size={18} aria-hidden="true" /> Volver al inicio</a>
+        <a className="products-back" href="/#tienda"><ArrowLeft size={18} aria-hidden="true" /> Volver al inicio</a>
         <Button href="/#agenda">Agendar cita</Button>
       </header>
 

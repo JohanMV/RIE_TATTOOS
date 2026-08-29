@@ -4,12 +4,12 @@ export const whatsappNumber = "51999999999";
 
 export const navItems = [
   ["Inicio", "#inicio"],
-  ["Portafolio", "#portafolio"],
+  ["Portafolio", "/portafolio"],
   ["Artistas", "#artistas"],
   ["Estilos", "#estilos"],
   ["Estudio", "#estudio"],
   ["Cuidados", "#cuidados"],
-  ["Tienda", "#productos"],
+  ["Tienda", "/tienda"],
 ] as const;
 
 export const filters: TattooStyle[] = ["Todos", "Blackwork", "Fine line", "Realismo", "Geométrico", "Anime"];

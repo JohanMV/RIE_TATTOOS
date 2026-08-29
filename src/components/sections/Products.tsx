@@ -3,7 +3,7 @@ import { ProductCatalog } from "@/features/products/components";
 
 export function Products() {
   return (
-    <section id="productos" className="section products-section" aria-labelledby="products-title">
+    <section id="tienda" className="section products-section" aria-labelledby="products-title">
       <Reveal className="products-heading">
         <h2 id="products-title">PRODUCTOS<br />QUE CUIDAN<br /><span>CADA DETALLE</span></h2>
         <p>Una selección breve para acompañar la piel y el trabajo dentro del estudio.</p>
