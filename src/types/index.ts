@@ -23,6 +23,7 @@ export interface Product {
   name: string;
   category: ProductCategoryId;
   image: string;
+  images?: string[];
   imageAlt: string;
   imagePosition?: string;
   sourceUrl: string;

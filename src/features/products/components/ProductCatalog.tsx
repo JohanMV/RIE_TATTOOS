@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { ArrowUpRight, Package } from "@phosphor-icons/react";
+import { ArrowUpRight, CaretRight, Package } from "@phosphor-icons/react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { Product, ProductCategoryId } from "@/types";
 import { productCategories, productWhatsappNumber } from "../data/products";
@@ -10,6 +10,47 @@ interface ProductCatalogProps {
   onCategoryChange?: (category: ProductCategoryId) => void;
 }
 
+function ProductImageGallery({ product }: { product: Product }) {
+  const images = product.images?.length ? product.images.slice(0, 4) : [product.image];
+  const [current, setCurrent] = useState(0);
+  const total = images.length;
+  const currentImage = images[current] ?? images[0];
+  const next = () => setCurrent((index) => (index + 1) % total);
+
+  return (
+    <div className={`product-image${total > 1 ? " product-gallery" : ""}`}>
+      <img
+        key={currentImage}
+        src={currentImage}
+        alt={total > 1 ? `${product.imageAlt}. Vista ${current + 1} de ${total}` : product.imageAlt}
+        width="900"
+        height="1100"
+        loading="lazy"
+        decoding="async"
+        referrerPolicy="no-referrer"
+        style={product.imagePosition ? { objectPosition: product.imagePosition } : undefined}
+      />
+      {total > 1 && (
+        <>
+          <span className="product-gallery-counter" aria-live="polite">
+            {String(current + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
+          </span>
+          <div className="product-gallery-navigation">
+            <button type="button" onClick={next} aria-label={`Ver foto siguiente de ${product.name}`}>
+              <CaretRight size={18} weight="bold" aria-hidden="true" />
+            </button>
+          </div>
+          <div className="product-gallery-progress" aria-hidden="true">
+            {images.map((image, index) => (
+              <span key={image} className={index === current ? "active" : ""} />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
 function ProductCard({ product }: { product: Product }) {
   const category = productCategories.find((item) => item.id === product.category)?.label ?? "Productos";
   const message = `Hola TATTOO PERÚ. Quiero consultar por ${product.name}.`;
@@ -17,18 +58,7 @@ function ProductCard({ product }: { product: Product }) {
 
   return (
     <article className="product-card">
-      <div className="product-image">
-        <img
-          src={product.image}
-          alt={product.imageAlt}
-          width="900"
-          height="1100"
-          loading="lazy"
-          decoding="async"
-          referrerPolicy="no-referrer"
-          style={product.imagePosition ? { objectPosition: product.imagePosition } : undefined}
-        />
-      </div>
+      <ProductImageGallery product={product} />
       <div className="product-meta">
         <div>
           <p>{category}</p>
