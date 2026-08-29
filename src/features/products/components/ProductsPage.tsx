@@ -15,7 +15,7 @@ function getInitialCategory(): ProductCategoryId {
 export function ProductsPage() {
   useEffect(() => {
     const previousTitle = document.title;
-    document.title = "Productos | TATTOO PERÚ";
+    document.title = "Tienda | TATTOO PERÚ";
     return () => { document.title = previousTitle; };
   }, []);
 

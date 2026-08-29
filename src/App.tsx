@@ -10,7 +10,7 @@ export default function App() {
     return <PortfolioPage />;
   }
 
-  if (path === "/productos") {
+  if (path === "/tienda") {
     return <ProductsPage />;
   }
 

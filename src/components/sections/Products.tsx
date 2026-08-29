@@ -10,7 +10,7 @@ export function Products() {
       </Reveal>
       <ProductCatalog context="home" />
       <div className="products-action">
-        <Button href="/productos" variant="secondary" arrow>Ver todos los productos</Button>
+        <Button href="/tienda" variant="secondary" arrow>Ver todos los productos</Button>
       </div>
     </section>
   );
