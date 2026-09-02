@@ -24,5 +24,5 @@ export const portfolio: PortfolioPiece[] = [
 
 export const artists: Artist[] = [
   { name: "Mateo Salazar", role: "Artista residente", styles: "Blackwork y geometría", image: "/images/tattoo-artist.jpg" },
-  { name: "Valeria Cruz", role: "Artista residente", styles: "Realismo y microrealismo", image: "/images/tattoo-hero.jpg" },
+  { name: "Valeria Cruz", role: "Artista residente", styles: "Realismo y microrealismo", image: "/images/tatuadora.webp" },
 ];
