@@ -10,7 +10,7 @@ const care = [
 export function Care() {
   return (
     <section id="cuidados" className="section care-section">
-      <Reveal className="care-image"><img src="/images/cuidados.webp" alt="Tatuaje en proceso de cuidado y cicatrización" loading="lazy" /></Reveal>
+      <Reveal className="care-image"><img src="/images/cuidados_2.webp" alt="Tatuaje en proceso de cuidado y cicatrización" loading="lazy" /></Reveal>
       <Reveal className="care-content">
         <h2>LA OBRA NO TERMINA<br /><span>AL SALIR DEL ESTUDIO</span></h2>
         <p>Una buena cicatrización conserva la precisión de cada línea. Te acompañamos con indicaciones simples y responsables.</p>

@@ -4,10 +4,10 @@ import { Button, Reveal } from "@/components/ui";
 import type { TattooStyle } from "@/types";
 
 const styles: Array<{ name: Exclude<TattooStyle, "Todos">; copy: string; image: string }> = [
-  { name: "Blackwork", copy: "Contraste, masa y ritmo para piezas de presencia contundente.", image: "/images/tattoo-hero.jpg" },
-  { name: "Fine line", copy: "Trazos precisos y composiciones sutiles con detalle milimétrico.", image: "/images/tattoo-detail.jpg" },
-  { name: "Realismo", copy: "Volumen, luz y textura para imágenes con profundidad auténtica.", image: "/images/tattoo-artist.jpg" },
-  { name: "Geométrico", copy: "Orden visual y simbolismo andino adaptados a cada cuerpo.", image: "/images/tattoo-detail.jpg" },
+  { name: "Blackwork", copy: "Contraste, masa y ritmo para piezas de presencia contundente.", image: "/images/blackwork.webp" },
+  { name: "Fine line", copy: "Trazos precisos y composiciones sutiles con detalle milimétrico.", image: "/images/fine_line_3.webp" },
+  { name: "Realismo", copy: "Volumen, luz y textura para imágenes con profundidad auténtica.", image: "/images/tatuaje_realista_3.webp" },
+  { name: "Geométrico", copy: "Orden visual y simbolismo andino adaptados a cada cuerpo.", image: "/images/tatuaje_geometrico_1.webp" },
 ];
 
 export function Styles() {
