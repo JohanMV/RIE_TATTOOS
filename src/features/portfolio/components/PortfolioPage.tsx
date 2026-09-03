@@ -13,8 +13,10 @@ function getInitialFilter(): TattooStyle {
 
 export function PortfolioPage() {
   const [active, setActive] = useState<TattooStyle>(getInitialFilter);
+  const [columns, setColumns] = useState<2 | 3>(3);
   const reduce = useReducedMotion();
   const works = useMemo(() => active === "Todos" ? portfolio : portfolio.filter((work) => work.style === active), [active]);
+  const isCompact = columns === 3;
 
   const selectFilter = (filter: TattooStyle) => {
     setActive(filter);
@@ -49,12 +51,22 @@ export function PortfolioPage() {
             <h2 id="archive-title">Portafolio</h2>
             <p>{works.length} {works.length === 1 ? "trabajo" : "trabajos"}</p>
           </div>
-          <div className="filter-row" role="group" aria-label="Filtrar portafolio completo por estilo">
-            {filters.map((filter) => (
-              <button key={filter} className={active === filter ? "active" : ""} onClick={() => selectFilter(filter)} aria-pressed={active === filter}>{filter}</button>
-            ))}
+          <div className="archive-controls">
+            <div className="filter-row" role="group" aria-label="Filtrar portafolio completo por estilo">
+              {filters.map((filter) => (
+                <button key={filter} className={active === filter ? "active" : ""} onClick={() => selectFilter(filter)} aria-pressed={active === filter}>{filter}</button>
+              ))}
+            </div>
+            <button
+              type="button"
+              className="portfolio-layout-switch"
+              onClick={() => setColumns(isCompact ? 2 : 3)}
+              aria-label={`Cambiar a vista ${isCompact ? "amplia" : "compacta"}`}
+            >
+              Vista {isCompact ? "amplia" : "compacta"}
+            </button>
           </div>
-          <motion.div className="archive-grid" layout>
+          <motion.div className={`archive-grid archive-columns-${columns}`} layout>
             <AnimatePresence mode="popLayout">
               {works.map((work) => (
                 <motion.article className="archive-work" key={work.id} layout

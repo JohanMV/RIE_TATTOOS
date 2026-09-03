@@ -7,7 +7,7 @@ import { PortfolioGallery } from "@/features/portfolio/components";
 
 export function Portfolio() {
   const [active, setActive] = useState<TattooStyle>("Todos");
-  const [columns, setColumns] = useState<2 | 3>(2);
+  const [columns, setColumns] = useState<2 | 3>(3);
   const reduce = useReducedMotion();
   const works = useMemo(() => active === "Todos" ? portfolio : portfolio.filter((item) => item.style === active), [active]);
   const isCompact = columns === 3;
