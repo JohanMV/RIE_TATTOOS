@@ -53,7 +53,10 @@ export function TikTok() {
       <Reveal className="tiktok-heading">
         <p className="eyebrow">Trabajo en movimiento</p>
         <h2 id="tiktok-title">TINTA QUE<br /><span>COBRA VIDA</span></h2>
-        <p>Una selección de trabajos, procesos y detalles vistos desde el estudio.</p>
+        <p>
+          Síguenos en <a href="https://www.tiktok.com/@cybersys.pro" target="_blank" rel="noreferrer">TikTok</a> e{" "}
+          <a href="https://www.instagram.com/johan_mv2000/" target="_blank" rel="noreferrer">Instagram</a> para ver más.
+        </p>
       </Reveal>
       <div className="tiktok-grid" aria-label="Videos de TikTok del trabajo del estudio">
         {videos.map((video, index) => (
