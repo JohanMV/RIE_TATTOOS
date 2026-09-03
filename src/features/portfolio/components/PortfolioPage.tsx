@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
-import { ArrowLeft, ArrowUpRight } from "@phosphor-icons/react";
+import { ArrowUpRight } from "@phosphor-icons/react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { filters, portfolio } from "@/data/content";
 import type { TattooStyle } from "@/types";
-import { Button } from "@/components/ui";
+import { Navbar } from "@/components/layout";
 import { PortfolioGallery } from "./PortfolioGallery";
 
 function getInitialFilter(): TattooStyle {
@@ -32,13 +32,7 @@ export function PortfolioPage() {
 
   return (
     <div className="portfolio-page">
-      <header className="portfolio-page-nav">
-        <a className="brand" href="/#inicio" aria-label="Volver al inicio de TATTOO PERÚ">
-          <span className="brand-mark">TP</span><span>TATTOO PERÚ</span>
-        </a>
-        <a className="portfolio-back" href="/#portafolio"><ArrowLeft size={18} /> Volver al inicio</a>
-        <Button href="/#agenda">Cotizar tatuaje</Button>
-      </header>
+      <Navbar activeItem="Portafolio" ctaLabel="Cotizar tatuaje" />
 
       <main>
         <section className="portfolio-page-hero">

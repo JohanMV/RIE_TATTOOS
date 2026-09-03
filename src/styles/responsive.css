@@ -12,6 +12,7 @@
   .menu-button { display: grid; place-items: center; width: 42px; height: 42px; padding: 0; color: #f2f0eb; border: 1px solid rgba(242,240,235,.3); background: rgba(8,8,8,.45); cursor: pointer; }
   .mobile-nav { position: fixed; inset: 72px 0 0; z-index: 19; display: flex; flex-direction: column; padding: 38px 24px; overflow-y: auto; background: #0a0a0a; }
   .mobile-nav > a:not(.button) { padding: 17px 0; border-bottom: 1px solid #2b2929; font-family: var(--font-display); font-size: 1.9rem; font-weight: 800; text-transform: uppercase; }
+  .mobile-nav > a[aria-current="page"] { color: #e32a35; }
   .mobile-nav .button { margin-top: 28px; }
   .artists-section, .care-section { grid-template-columns: 1fr; }
   .artists-section > div:first-child { max-width: 640px; }
@@ -22,6 +23,8 @@
   .process-step:nth-child(n+3) { border-top: 1px solid #3a3734; }
   .quote-section { grid-template-columns: 1fr; }
   .tiktok-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .portfolio-layout-switch { display: none; }
+  .portfolio-grid.portfolio-columns-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px 24px; }
 }
 
 @media (max-width: 767px) {
@@ -41,10 +44,12 @@
   .hero-actions .button { padding-inline: 10px; font-size: .68rem; }
   .hero-signature { display: none; }
   .section-heading > p { margin-top: 24px; }
+  .portfolio-controls { margin-top: 42px; }
   .filter-row { margin-top: 42px; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 5px; scrollbar-width: none; overscroll-behavior-inline: contain; }
   .filter-row::-webkit-scrollbar { display: none; }
   .filter-row button { flex: 0 0 auto; }
   .portfolio-grid { grid-template-columns: 1fr; gap: 42px; }
+  .portfolio-grid.portfolio-columns-3 { grid-template-columns: 1fr; gap: 42px; }
   .portfolio-grid.portfolio-count-1 { grid-template-columns: 1fr; }
   .work:nth-child(n) { width: 100%; grid-column: 1; margin: 0; }
   .work-image-wrap { aspect-ratio: 4 / 3; }

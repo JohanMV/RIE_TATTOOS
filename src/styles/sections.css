@@ -6,8 +6,15 @@
 .filter-row { margin: 64px 0 28px; display: flex; gap: 6px; flex-wrap: wrap; }
 .filter-row button { padding: 11px 16px; color: #8d8984; border: 1px solid #34312f; background: transparent; border-radius: 1px; cursor: pointer; transition: all .25s ease; }
 .filter-row button:hover, .filter-row button.active { color: #fff; border-color: #d51f2b; background: #d51f2b; }
+.portfolio-controls { display: flex; align-items: center; gap: 18px; margin: 64px 0 28px; }
+.portfolio-section .filter-row { margin: 0; }
+.portfolio-layout-switch { min-height: 44px; margin-left: auto; padding: 0 16px; color: #b8b3ad; border: 1px solid #403c39; border-radius: 1px; background: transparent; cursor: pointer; font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; transition: color .25s ease, border-color .25s ease, background .25s ease, transform .15s ease; }
+.portfolio-layout-switch:hover { color: #fff; border-color: #d51f2b; background: #d51f2b; }
+.portfolio-layout-switch:active { transform: translateY(1px); }
 .portfolio-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px 24px; align-items: start; }
+.portfolio-grid.portfolio-columns-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px 20px; }
 .portfolio-grid.portfolio-count-1 { grid-template-columns: minmax(0, 900px); }
+.portfolio-grid.portfolio-columns-3.portfolio-count-1 { grid-template-columns: minmax(0, 900px); }
 .work-image-wrap { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #171717; }
 .work img { height: 100%; object-fit: cover; filter: saturate(.75) contrast(1.03); }
 .portfolio-gallery { position: relative; }
