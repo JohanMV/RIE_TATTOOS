@@ -19,7 +19,7 @@ export const portfolio: PortfolioPiece[] = [
   { id: 2, title: "Cóndor ancestral", style: "Blackwork", artist: "Mateo Salazar", images: ["/images/blackwork.webp", "/images/blackwork_2.webp", "/images/blackwork_3.webp"], position: "Hombro" },
   { id: 3, title: "Ritual de tinta", style: "Realismo", artist: "Valeria Cruz", images: ["/images/tatuaje_realista.webp", "/images/tatuaje_realista_2.webp", "/images/tatuaje_realista_3.webp"], position: "Antebrazo" },
   { id: 4, title: "Trama botánica", style: "Fine line", artist: "Alonso Ríos", images: ["images/fine_line_5.webp", "/images/fine_line.webp", "/images/fine_line_6.webp"], position: "Pantorrilla" },
-  { id: 5, title: "Colección anime", style: "Anime", artist: "TATTOO PERÚ", images: ["/images/tatto_anime_1.webp", "/images/tatto_anime_2.webp", "/images/tatto_anime_3.webp"], position: "Diseño anime" },
+  { id: 5, title: "Colección anime", style: "Anime", artist: "RIE TATTOO'S", images: ["/images/tatto_anime_1.webp", "/images/tatto_anime_2.webp", "/images/tatto_anime_3.webp"], position: "Diseño anime" },
 ];
 
 export const artists: Artist[] = [

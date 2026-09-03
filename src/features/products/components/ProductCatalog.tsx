@@ -53,7 +53,7 @@ function ProductImageGallery({ product }: { product: Product }) {
 
 function ProductCard({ product }: { product: Product }) {
   const category = productCategories.find((item) => item.id === product.category)?.label ?? "Productos";
-  const message = `Hola TATTOO PERÚ. Quiero consultar por ${product.name}.`;
+  const message = `Hola RIE TATTOO'S. Quiero consultar por ${product.name}.`;
   const whatsappHref = `https://wa.me/${productWhatsappNumber}?text=${encodeURIComponent(message)}`;
 
   return (

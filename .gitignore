@@ -8,13 +8,34 @@ build/
 out/
 coverage/
 .vite/
+.cache/
+.parcel-cache/
+.turbo/
+.eslintcache
 *.tsbuildinfo
+
+# Temporary files and folders
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
 
 # Local environment and secrets
 .env
 .env.*
 !.env.example
 *.local
+*.pem
+*.key
+*.pfx
+*.p12
+*.keystore
+*.jks
+*.secret
+*.credentials
 
 # Deployment state
 .vercel/
