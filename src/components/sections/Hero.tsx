@@ -10,11 +10,11 @@ export function Hero() {
   });
   return (
     <section id="inicio" className="hero">
-      <img className="hero-image" src="/images/tattoo-hero.jpg" alt="Artista de RIE TATTOO'S tatuando un diseño de cóndor" fetchPriority="high" />
+      <img className="hero-image" src="/images/tattoo-hero.jpg" alt="Artista de RIE TATTOOS tatuando un diseño de cóndor" fetchPriority="high" />
       <div className="hero-shade" />
       <div className="hero-content">
         <motion.p className="eyebrow" {...enter(0.1)}>Estudio de tatuajes en Lima</motion.p>
-        <motion.h1 {...enter(0.18)}>RIE<br /><span>TATTOO'S</span></motion.h1>
+        <motion.h1 {...enter(0.18)}>RIE<br /><span>TATTOOS</span></motion.h1>
         <motion.p className="hero-copy" {...enter(0.26)}>Diseños que nacen de tu historia y se ejecutan con precisión.</motion.p>
         <motion.div className="hero-actions" {...enter(0.34)}>
           <Button href="#portafolio">Ver trabajos</Button>

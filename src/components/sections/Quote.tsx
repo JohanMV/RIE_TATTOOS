@@ -29,7 +29,7 @@ export function Quote() {
     const selectedDesign = String(data.get("portfolioDesign") ?? "").trim();
     const desiredDateValue = new Date(desiredDate);
     const formattedDesiredDate = desiredDateValue.toLocaleString("es-PE", { dateStyle: "long", timeStyle: "short", hour12: true });
-    const message = `Hola RIE TATTOO'S. Soy ${data.get("name")}. Quiero cotizar un tatuaje ${data.get("style")} en ${data.get("zone")}.${selectedDesign ? ` Me interesa la pieza "${selectedDesign}" del portafolio.` : ""} Mi fecha y hora preferidas son ${formattedDesiredDate}. Mi idea: ${data.get("idea")}.${referenceUrl ? ` Imagen de referencia: ${referenceUrl}.` : ""}`;
+    const message = `Hola RIE TATTOOS. Soy ${data.get("name")}. Quiero cotizar un tatuaje ${data.get("style")} en ${data.get("zone")}.${selectedDesign ? ` Me interesa la pieza "${selectedDesign}" del portafolio.` : ""} Mi fecha y hora preferidas son ${formattedDesiredDate}. Mi idea: ${data.get("idea")}.${referenceUrl ? ` Imagen de referencia: ${referenceUrl}.` : ""}`;
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
     setDesiredDate("");
     setDateError("");

@@ -15,7 +15,7 @@ function getInitialCategory(): ProductCategoryId {
 export function ProductsPage() {
   useEffect(() => {
     const previousTitle = document.title;
-    document.title = "Tienda | RIE TATTOO'S";
+    document.title = "Tienda | RIE TATTOOS";
     return () => { document.title = previousTitle; };
   }, []);
 
@@ -29,8 +29,8 @@ export function ProductsPage() {
   return (
     <div className="products-page">
       <header className="products-page-nav">
-        <a className="brand" href="/#inicio" aria-label="Volver al inicio de RIE TATTOO'S">
-          <img className="brand-mark" src="/logo_rie_tattoos.webp" alt="" /><span>RIE TATTOO'S</span>
+        <a className="brand" href="/#inicio" aria-label="Volver al inicio de RIE TATTOOS">
+          <img className="brand-mark" src="/logo_rie_tattoos.webp" alt="" /><span>RIE TATTOOS</span>
         </a>
         <a className="products-back" href="/#tienda"><ArrowLeft size={18} aria-hidden="true" /> Volver al inicio</a>
         <Button href="/#agenda">Agendar cita</Button>
@@ -56,7 +56,7 @@ export function ProductsPage() {
       </main>
 
       <footer className="products-page-footer">
-        <span>© {new Date().getFullYear()} RIE TATTOO'S</span>
+        <span>© {new Date().getFullYear()} RIE TATTOOS</span>
         <a href="/#agenda">Reservar tatuaje <ArrowUpRight size={16} aria-hidden="true" /></a>
       </footer>
     </div>
