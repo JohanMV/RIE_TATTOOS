@@ -9,15 +9,17 @@ import { Button } from "@/components/ui";
 type NavbarProps = {
   activeItem?: (typeof navItems)[number][0];
   ctaLabel?: string;
+  ctaHref?: string;
 };
 
-export function Navbar({ activeItem, ctaLabel = "Agendar cita" }: NavbarProps) {
+export function Navbar({ activeItem, ctaLabel = "Agendar cita", ctaHref }: NavbarProps) {
   const [open, setOpen] = useState(false);
   const reduce = useReducedMotion();
   const { scrolled, visible } = useScrolled(60);
   useBodyLock(open);
   const isHome = (window.location.pathname.replace(/\/+$/, "") || "/") === "/";
   const resolveHref = (href: string) => href.startsWith("#") && !isHome ? `/${href}` : href;
+  const resolvedCtaHref = ctaHref ?? resolveHref("#agenda");
 
   return (
     <header className={[
@@ -33,7 +35,7 @@ export function Navbar({ activeItem, ctaLabel = "Agendar cita" }: NavbarProps) {
           <a key={href} href={resolveHref(href)} aria-current={activeItem === label ? "page" : undefined}>{label}</a>
         ))}
       </nav>
-      <Button href={resolveHref("#agenda")} className="nav-cta">{ctaLabel}</Button>
+      <Button href={resolvedCtaHref} className="nav-cta">{ctaLabel}</Button>
       <button className="menu-button" type="button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-menu" aria-label={open ? "Cerrar menú" : "Abrir menú"}>
         {open ? <X size={24} /> : <List size={24} />}
       </button>
@@ -44,7 +46,7 @@ export function Navbar({ activeItem, ctaLabel = "Agendar cita" }: NavbarProps) {
             {navItems.map(([label, href]) => (
               <a key={href} href={resolveHref(href)} aria-current={activeItem === label ? "page" : undefined} onClick={() => setOpen(false)}>{label}</a>
             ))}
-            <Button href={resolveHref("#agenda")} onClick={() => setOpen(false)}>{ctaLabel}</Button>
+            <Button href={resolvedCtaHref} onClick={() => setOpen(false)}>{ctaLabel}</Button>
           </motion.nav>
         )}
       </AnimatePresence>

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { ArrowLeft, ArrowUpRight } from "@phosphor-icons/react";
-import { Button } from "@/components/ui";
+import { ArrowUpRight } from "@phosphor-icons/react";
+import { Navbar } from "@/components/layout";
 import type { ProductCategoryId } from "@/types";
 import { productCategories } from "../data/products";
 import { ProductCatalog } from "./ProductCatalog";
@@ -28,13 +28,7 @@ export function ProductsPage() {
 
   return (
     <div className="products-page">
-      <header className="products-page-nav">
-        <a className="brand" href="/#inicio" aria-label="Volver al inicio de RIE TATTOOS">
-          <img className="brand-mark" src="/logo_rie_tattoos.webp" alt="" /><span>RIE TATTOOS</span>
-        </a>
-        <a className="products-back" href="/#tienda"><ArrowLeft size={18} aria-hidden="true" /> Volver al inicio</a>
-        <Button href="/#agenda">Agendar cita</Button>
-      </header>
+      <Navbar activeItem="Tienda" ctaLabel="Ver productos" ctaHref="/tienda#catalogo" />
 
       <main>
         <section className="products-page-hero">
@@ -46,7 +40,7 @@ export function ProductsPage() {
           </div>
         </section>
 
-        <section className="products-archive" aria-labelledby="products-archive-title">
+        <section id="catalogo" className="products-archive" aria-labelledby="products-archive-title">
           <div className="products-archive-heading">
             <h2 id="products-archive-title">Catálogo</h2>
             <p>Consulta disponibilidad directamente con el estudio.</p>
