@@ -6,7 +6,7 @@ const assurances = ["Material esterilizado y descartable", "Diseño original par
 export function Studio() {
   return (
     <section id="estudio" className="studio-section">
-      <div className="studio-image"><img src="/images/tattoo-artist.jpg" alt="Interior y artista del estudio RIE TATTOOS" loading="lazy" /></div>
+      <div className="studio-image"><img src="/images/estudio.webp" alt="Interior y artista del estudio RIE TATTOOS" loading="lazy" /></div>
       <Reveal className="studio-copy">
         <h2>UN ESTUDIO<br />HECHO PARA<br /><span>CREAR CON CALMA</span></h2>
         <p>Trabajamos con cita previa para dedicar tiempo real a cada idea. El espacio, los materiales y el proceso responden a un solo estándar: hacer las cosas bien.</p>
